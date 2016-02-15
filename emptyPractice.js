@@ -1,4 +1,5 @@
 //Once you complete a problem, open up Chrome and check the answer in the console.
+
 var outer = function(){
   var name = 'Tyler';
   return function(){
@@ -9,14 +10,15 @@ var outer = function(){
 //Invoke outer saving the return value into another variable called 'inner'.
 
   //Code Here
-var inner = outer();
+
 //Once you do that, invoke inner.
 
   //Code Here
-inner();
+
 
 
 //Next problem
+
 
 
 var callFriend = function(){
@@ -31,8 +33,8 @@ var callFriend = function(){
 //Do what you need to do in order to call your function and get 'Calling Jake at 435-215-9248' in your console.
 
   //Code Here
-var bff = callFriend();
-console.log(bff('435-215-9248'));
+
+
 
 //Next Problem
 
@@ -41,14 +43,7 @@ console.log(bff('435-215-9248'));
 /*
   Write a function called makeCounter that makes the following code work properly.
 */
-var makeCounter = function() {
-  var x = 0;
 
-  return function() {
-    x = x + 1;
-    console.log(x);
-  }
-}; 
   //Code Here
   var count = makeCounter();
   count() // 1
@@ -57,7 +52,9 @@ var makeCounter = function() {
   count() // 4
 
 
+
 //Next Problem
+
 
 
 /*
@@ -66,38 +63,5 @@ var makeCounter = function() {
   Once completed, add a second arguments that allows the function to be invoked N number of times.
   After the function has been called N number of times, console.log('STAHHP');
 */
-
-
-var callOnce = function(cb, n) {
-  //console.log(n);
-
-  x = true; 
-  return function() {
-    if(x) {
-      cb();
-      x = false;
-    }
-    n++;
-    if(n === 3){
-      //console.log('2nd function: ' + n);
-      console.log('STAHHP');
-    }
-    
-  };
-};
-
-var limitedFunc = callOnce(function() {alert('hi')}, 2 );
-limitedFunc(); //'hi'
-limitedFunc(); //'hi'
-limitedFunc(); //'STAHHP'
-limitedFunc(); //'STAHHP'
-
-
-
-
-
-
-
-
 
 
